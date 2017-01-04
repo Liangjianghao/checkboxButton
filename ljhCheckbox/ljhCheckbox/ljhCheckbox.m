@@ -37,7 +37,15 @@
     UIViewController *controller = [[UIViewController alloc]init];
     UITableView *alertTableView;
     dataArr=[NSMutableArray arrayWithArray:self.baseArr];
-    CGRect rect = CGRectMake(0, 0, 272, _baseArr.count*40);
+//    CGRect rect = CGRectMake(0, 0, 272, _baseArr.count*40);
+    CGRect rect;
+    if (_baseArr.count>5) {
+     rect = CGRectMake(0, 0, 272, 200);
+    }
+    else{
+     rect = CGRectMake(0, 0, 272, _baseArr.count*40);
+    }
+    
     
     [controller setPreferredContentSize:rect.size];
     alertTableView  = [[UITableView alloc]initWithFrame:rect];

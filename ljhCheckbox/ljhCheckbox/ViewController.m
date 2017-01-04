@@ -20,11 +20,13 @@
     [super viewDidLoad];
     
     ljhCheckbox *btn=[[ljhCheckbox alloc]init];
-    NSArray *myarr= [NSArray arrayWithObjects:@"选择1",@"选择2",@"选择36",@"选择1",@"选择21",@"选择361", nil];
+    NSArray *myarr= [NSArray arrayWithObjects:@"选择1",@"选择2",@"选择36",@"选择1",@"选择21",@"选择361",@"选择1",@"选择21",@"选择361",@"选择1",@"选择21",@"选择361",@"选择1",@"选择21",@"选择361",@"选择1",@"选择21",@"选择361", nil];
+       NSArray *myarr2= [NSArray arrayWithObjects:@"选择1",@"选择2", nil];
+    
     [btn mybuttonwithArr:myarr andTitle:@"测试"andMessage:@"3333"];
     [btn setFinishBlock:^(NSString *choice) {
 
-        NSLog(@"result%@",choice);
+        NSLog(@"result-->\n%@",choice);
     }];
     
     btn.frame=CGRectMake(10, 100, WIDTH-20, 40);
